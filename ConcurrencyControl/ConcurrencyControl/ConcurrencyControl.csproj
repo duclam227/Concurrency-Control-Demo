@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deadlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deadlock.Designer.cs">
+      <DependentUpon>Deadlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="DirtyRead.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,13 +71,31 @@
     <Compile Include="LostUpdate.Designer.cs">
       <DependentUpon>LostUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phantom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phantom.Designer.cs">
+      <DependentUpon>Phantom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnrepeatableRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnrepeatableRead.Designer.cs">
+      <DependentUpon>UnrepeatableRead.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Deadlock.resx">
+      <DependentUpon>Deadlock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirtyRead.resx">
       <DependentUpon>DirtyRead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phantom.resx">
+      <DependentUpon>Phantom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UnrepeatableRead.resx">
+      <DependentUpon>UnrepeatableRead.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
