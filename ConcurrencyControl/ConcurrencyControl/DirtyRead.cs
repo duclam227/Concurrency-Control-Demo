@@ -16,11 +16,35 @@ namespace ConcurrencyControl
         public DirtyRead()
         {
             InitializeComponent();
-
-            DataTable hopDongData = ConcurrencyControl_BUS.HopDongBUS.Instance.GetAllContracts();
-            HopDongDataGridView.DataSource = hopDongData;
         }
 
-        
+        private void ShowContract_Click(object sender, EventArgs e)
+        {
+            //gọi proc chưa fix
+            DataTable result = ConcurrencyControl_BUS.HopDongBUS.Instance.GetContractByID(inputIDTextBox2.Text);
+            Tran2DataGridView.DataSource = result;
+        }
+
+        private void ShowContractFixed_Click(object sender, EventArgs e)
+        {
+            //gọi proc đã fix
+            DataTable result = ConcurrencyControl_BUS.HopDongBUS.Instance.GetContractByIDFixed(inputIDTextBox2.Text);
+            Tran2DataGridView.DataSource = result;
+        }
+
+        private void DateUpdateButton_Click(object sender, EventArgs e)
+        {
+            string id = inputIDTextBox1.Text;
+            DateTime newDate = dateTimePicker.Value;
+
+            //gọi proc update
+            ConcurrencyControl_BUS.HopDongBUS.Instance.UpdateEndDate(id, newDate);
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            DataTable hopDongData = ConcurrencyControl_BUS.HopDongBUS.Instance.GetAllContracts();
+            Tran1DataGridView.DataSource = hopDongData;
+        }
     }
 }

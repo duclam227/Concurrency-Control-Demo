@@ -27,5 +27,28 @@ namespace ConcurrencyControl_BUS
 
             return result;
         }
+
+        public DataTable GetContractByIDFixed(string id)
+        {
+            DataTable result;
+
+            result = HopDongDAO.Instance.GetContractByIDFixed(id);
+
+            return result;
+        }
+
+        public DataTable GetContractByID(string id)
+        {
+            DataTable result;
+
+            result = HopDongDAO.Instance.GetContractByID(id);
+
+            return result;
+        }
+
+        public void UpdateEndDate(string id, DateTime newDate)
+        {
+            ConcurrencyControl_DAO.HopDongDAO.Instance.UpdateEndDate(id, newDate);
+        }
     }
 }
