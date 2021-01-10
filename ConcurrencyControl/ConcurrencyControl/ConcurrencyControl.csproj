@@ -91,6 +91,9 @@
     <EmbeddedResource Include="DirtyRead.resx">
       <DependentUpon>DirtyRead.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LostUpdate.resx">
+      <DependentUpon>LostUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

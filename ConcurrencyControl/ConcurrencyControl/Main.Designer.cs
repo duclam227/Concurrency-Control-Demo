@@ -29,69 +29,73 @@ namespace ConcurrencyControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.LUButton = new System.Windows.Forms.Button();
+            this.PButton = new System.Windows.Forms.Button();
+            this.URButton = new System.Windows.Forms.Button();
+            this.DButton = new System.Windows.Forms.Button();
+            this.DRButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // LUButton
             // 
-            this.button1.Location = new System.Drawing.Point(37, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lost Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LUButton.Location = new System.Drawing.Point(37, 59);
+            this.LUButton.Name = "LUButton";
+            this.LUButton.Size = new System.Drawing.Size(100, 50);
+            this.LUButton.TabIndex = 0;
+            this.LUButton.Text = "Lost Update";
+            this.LUButton.UseVisualStyleBackColor = true;
+            this.LUButton.Click += new System.EventHandler(this.LUButton_Click);
             // 
-            // button2
+            // PButton
             // 
-            this.button2.Location = new System.Drawing.Point(325, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Phantom";
-            this.button2.UseVisualStyleBackColor = true;
+            this.PButton.Location = new System.Drawing.Point(325, 59);
+            this.PButton.Name = "PButton";
+            this.PButton.Size = new System.Drawing.Size(100, 50);
+            this.PButton.TabIndex = 1;
+            this.PButton.Text = "Phantom";
+            this.PButton.UseVisualStyleBackColor = true;
+            this.PButton.Click += new System.EventHandler(this.PButton_Click);
             // 
-            // button3
+            // URButton
             // 
-            this.button3.Location = new System.Drawing.Point(105, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Unrepeatable Read";
-            this.button3.UseVisualStyleBackColor = true;
+            this.URButton.Location = new System.Drawing.Point(105, 155);
+            this.URButton.Name = "URButton";
+            this.URButton.Size = new System.Drawing.Size(110, 50);
+            this.URButton.TabIndex = 2;
+            this.URButton.Text = "Unrepeatable Read";
+            this.URButton.UseVisualStyleBackColor = true;
+            this.URButton.Click += new System.EventHandler(this.URButton_Click);
             // 
-            // button4
+            // DButton
             // 
-            this.button4.Location = new System.Drawing.Point(258, 155);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Deadlock";
-            this.button4.UseVisualStyleBackColor = true;
+            this.DButton.Location = new System.Drawing.Point(258, 155);
+            this.DButton.Name = "DButton";
+            this.DButton.Size = new System.Drawing.Size(100, 50);
+            this.DButton.TabIndex = 3;
+            this.DButton.Text = "Deadlock";
+            this.DButton.UseVisualStyleBackColor = true;
+            this.DButton.Click += new System.EventHandler(this.DButton_Click);
             // 
-            // button5
+            // DRButton
             // 
-            this.button5.Location = new System.Drawing.Point(180, 59);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Dirty Read";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.DRButton.Location = new System.Drawing.Point(180, 59);
+            this.DRButton.Name = "DRButton";
+            this.DRButton.Size = new System.Drawing.Size(100, 50);
+            this.DRButton.TabIndex = 4;
+            this.DRButton.Text = "Dirty Read";
+            this.DRButton.UseVisualStyleBackColor = true;
+            this.DRButton.Click += new System.EventHandler(this.DRButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 263);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.DRButton);
+            this.Controls.Add(this.DButton);
+            this.Controls.Add(this.URButton);
+            this.Controls.Add(this.PButton);
+            this.Controls.Add(this.LUButton);
             this.MaximumSize = new System.Drawing.Size(485, 310);
             this.MinimumSize = new System.Drawing.Size(485, 310);
             this.Name = "Main";
@@ -103,11 +107,11 @@ namespace ConcurrencyControl
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button LUButton;
+        private System.Windows.Forms.Button PButton;
+        private System.Windows.Forms.Button URButton;
+        private System.Windows.Forms.Button DButton;
+        private System.Windows.Forms.Button DRButton;
     }
 }
 
