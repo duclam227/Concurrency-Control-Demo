@@ -16,5 +16,10 @@ namespace ConcurrencyControl
         {
             InitializeComponent();
         }
+
+        private void Phantom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
