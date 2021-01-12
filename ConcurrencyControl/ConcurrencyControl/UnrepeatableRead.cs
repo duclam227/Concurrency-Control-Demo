@@ -31,7 +31,7 @@ namespace ConcurrencyControl
         private void ChangeToRentButton_Click(object sender, EventArgs e)
         {
             string id = Tran2InputHouseID.Text;
-            ConcurrencyControl_BUS.NhaBUS.Instance.ChangeToRent(id);
+            NhaBUS.Instance.ChangeToRent(id);
         }
 
         private void CountSellingHousesFixedButton_Click(object sender, EventArgs e)
@@ -42,6 +42,34 @@ namespace ConcurrencyControl
 
             Tran1DataGridView.DataSource = data.Item1;
             AmountLabel.Text = data.Item2.ToString();
+        }
+
+        private void ShowViewingButton_Click(object sender, EventArgs e)
+        {
+            string id = Tran1InputIDTextBox.Text;
+            Tuple<DataTable, int> data;
+            data = LuotXemBUS.Instance.GetViewingOfCustomer(id);
+
+            Tran1ViewingDataGridView.DataSource = data.Item1;
+            ViewingAmount.Text = data.Item2.ToString();
+        }
+
+        private void ShowViewingFixedButton_Click(object sender, EventArgs e)
+        {
+            string id = Tran1InputIDTextBox.Text;
+            Tuple<DataTable, int> data;
+            data = LuotXemBUS.Instance.GetViewingOfCustomerFixed(id);
+
+            Tran1ViewingDataGridView.DataSource = data.Item1;
+            ViewingAmount.Text = data.Item2.ToString();
+        }
+
+        private void DeleteViewingButton_Click(object sender, EventArgs e)
+        {
+            string id = Tran2IDInputTextBox.Text;
+            DateTime date = dateTimePicker1.Value;
+
+            LuotXemBUS.Instance.DeleteViewing(id, date);
         }
     }
 }
