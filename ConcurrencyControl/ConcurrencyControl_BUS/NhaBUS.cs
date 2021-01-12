@@ -26,6 +26,12 @@ namespace ConcurrencyControl_BUS
             return result;
         }
 
+        public DataTable GetAllHouses()
+        {
+            DataTable data = NhaDAO.Instance.GetAllHouses();
+            return data;
+        }
+
         public void ChangeToRent(string id)
         {
             NhaDAO.Instance.ChangeToRent(id);

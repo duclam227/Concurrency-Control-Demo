@@ -54,6 +54,17 @@ namespace ConcurrencyControl_DAO
             return result;
         }
 
+        public DataTable GetAllHouses()
+        {
+            string query = "select * from Nha";
+            DataTable data = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(data);
+
+            return data;
+        }
+
         public Tuple<DataTable, int> GetSellingHousesFixed(DateTime date)
         {
             DataTable data = new DataTable();
