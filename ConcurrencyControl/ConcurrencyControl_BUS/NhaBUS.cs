@@ -19,23 +19,50 @@ namespace ConcurrencyControl_BUS
             }
         }
 
-        public Tuple<DataTable, int> GetSellingHouses(DateTime date)
+        public void UpdateEndDate(string id, DateTime newDate)
         {
-            Tuple<DataTable, int> result = NhaDAO.Instance.GetSellingHouses(date);
+            ConcurrencyControl_DAO.NhaDAO.Instance.UpdateEndDate(id, newDate);
+        }
 
+        public DataTable GetAHouseData(string id)
+        {
+            DataTable result;
+
+            result = NhaDAO.Instance.GetAHouseData(id);
             return result;
         }
 
-        public void ChangeToRent(string id)
+        public DataTable GetAHouseData_Fix (string id)
         {
-            NhaDAO.Instance.ChangeToRent(id);
+            DataTable result;
+
+            result = NhaDAO.Instance.GetAHouseData_Fix(id);
+            return result;
         }
 
-        public Tuple<DataTable, int> GetSellingHousesFixed(DateTime date)
+        public DataTable ShowListHouse ()
         {
-            Tuple<DataTable, int> result = NhaDAO.Instance.GetSellingHousesFixed(date);
-
+            DataTable result;
+            result = NhaDAO.Instance.ShowListHouse();
             return result;
+        }
+
+        public void Update_DL (string _id, DateTime _newdate)
+        {
+            ConcurrencyControl_DAO.NhaDAO.Instance.Update_DL(_id, _newdate);
+        }
+
+        public void Update_DL_Fix(string _id, DateTime _newdate)
+        {
+            ConcurrencyControl_DAO.NhaDAO.Instance.Update_DL_Fix(_id, _newdate);
+        }
+
+        public string SellHouse(string _id)
+        {
+            string _SDT;
+            _SDT = ConcurrencyControl_DAO.NhaDAO.Instance.SellHouse(_id);
+
+            return _SDT;
         }
     }
 }

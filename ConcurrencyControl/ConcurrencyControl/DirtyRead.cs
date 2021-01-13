@@ -46,5 +46,38 @@ namespace ConcurrencyControl
             DataTable hopDongData = ConcurrencyControl_BUS.HopDongBUS.Instance.GetAllContracts();
             Tran1DataGridView.DataSource = hopDongData;
         }
+
+        private void Update_DR_TH2_GT1_Click(object sender, EventArgs e)
+        {
+            string id = textBox1.Text;
+            DateTime newDate = dateTimePicker1.Value;
+
+            //gọi proc update
+            ConcurrencyControl_BUS.NhaBUS.Instance.UpdateEndDate(id, newDate);
+
+            MessageBox.Show("Completed");
+            DataTable NhaTable = ConcurrencyControl_BUS.NhaBUS.Instance.GetAHouseData_Fix(id);    
+            DR_TH2_GT1.DataSource = NhaTable;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable NHATABLE = ConcurrencyControl_BUS.NhaBUS.Instance.ShowListHouse();
+            DR_TH2_GT1.DataSource = NHATABLE;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = textBox2.Text;
+            DataTable NhaTable = ConcurrencyControl_BUS.NhaBUS.Instance.GetAHouseData(id);
+            DR_TH2_GT2.DataSource = NhaTable;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string id = textBox2.Text;
+            DataTable NhaTable = ConcurrencyControl_BUS.NhaBUS.Instance.GetAHouseData_Fix(id);
+            DR_TH2_GT2.DataSource = NhaTable;
+        }
     }
 }
