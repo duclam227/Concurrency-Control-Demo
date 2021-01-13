@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConcurrencyControl_DAO;
 
-namespace ConcurrencyControl_DAO
+namespace ConcurrencyControl_BUS
 {
-    public class LuotXemDAO : DBConnect
+    public class LuotXemDAO
     {
-        private static LuotXemDAO _instance = null;
-
+        private static LuotXemDAO _instance = new LuotXemDAO();
         public static LuotXemDAO Instance
         {
             get
             {
-                if (_instance == null)
-                {
-                    _instance = new LuotXemDAO();
-                }
-
                 return _instance;
             }
         }

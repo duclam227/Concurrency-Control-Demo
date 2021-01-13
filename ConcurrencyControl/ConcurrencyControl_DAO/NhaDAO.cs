@@ -25,85 +25,6 @@ namespace ConcurrencyControl_DAO
             }
         }
 
-        public Tuple<DataTable, int> GetSellingHouses(DateTime date)
-        {
-            DataTable data = new DataTable();
-            string proc = "GetAmountOfSellingHouses";
-
-            SqlCommand cmd = new SqlCommand(proc, _conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            //truyền biến vào
-            cmd.Parameters.Add("@date", SqlDbType.Date).Value = date;
-            cmd.Parameters.Add("@amount", SqlDbType.Int).Direction = ParameterDirection.Output;
-
-            _conn.Open();
-            cmd.ExecuteNonQuery();
-            
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.SelectCommand = cmd;
-
-            adapter.Fill(data);
-            
-            int amount = Convert.ToInt32(cmd.Parameters["@amount"].Value);
-            _conn.Close();
-
-            Tuple<DataTable, int> result = new Tuple<DataTable, int>(data, amount);
-
-            return result;
-        }
-
-        public DataTable GetAllHouses()
-        {
-            string query = "select * from Nha";
-            DataTable data = new DataTable();
-
-            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
-            adapter.Fill(data);
-
-            return data;
-        }
-
-        public Tuple<DataTable, int> GetSellingHousesFixed(DateTime date)
-        {
-            DataTable data = new DataTable();
-            string proc = "GetAmountOfSellingHouses_Fix";
-
-            SqlCommand cmd = new SqlCommand(proc, _conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            //truyền biến vào
-            cmd.Parameters.Add("@date", SqlDbType.Date).Value = date;
-            cmd.Parameters.Add("@amount", SqlDbType.Int).Direction = ParameterDirection.Output;
-
-            _conn.Open();
-            cmd.ExecuteNonQuery();
-
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.SelectCommand = cmd;
-
-            adapter.Fill(data);
-
-            int amount = Convert.ToInt32(cmd.Parameters["@amount"].Value);
-            _conn.Close();
-
-            Tuple<DataTable, int> result = new Tuple<DataTable, int>(data, amount);
-
-            return result;
-        }
-
-        public void ChangeToRent(string id)
-        {
-            string command = $"exec dbo.SetHouseToRenting '{id}'";
-            SqlCommand cmd = new SqlCommand(command, _conn);
-
-            _conn.Open();
-            cmd.ExecuteNonQuery();
-            _conn.Close();
-        }
-
         public void UpdateEndDate(string id, DateTime newDate)
         {
             string query = $"exec _Update_AD_Days '{id}', '{newDate}'";
@@ -127,7 +48,7 @@ namespace ConcurrencyControl_DAO
             return result;
         }
 
-        public DataTable GetAHouseData_Fix(string id)
+        public DataTable GetAHouseData_Fix (string id)
         {
             DataTable result = new DataTable();
 
@@ -182,7 +103,7 @@ namespace ConcurrencyControl_DAO
             cmd.Parameters.Add("@MaNha", SqlDbType.VarChar, 15).Value = _id;
             cmd.Parameters.Add("@sdt", SqlDbType.VarChar, 15).Direction = ParameterDirection.Output;
 
-
+            
             _conn.Open();
             cmd.ExecuteNonQuery();
 
