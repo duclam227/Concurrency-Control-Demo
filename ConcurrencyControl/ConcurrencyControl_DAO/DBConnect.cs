@@ -11,7 +11,7 @@ namespace ConcurrencyControl_DAO
 {
     public class DBConnect 
     {
-        static string connectionString = "Data Source=DESKTOP-0IA21OI;Initial Catalog=QLBDS_11;Integrated Security=True";
+        static string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         protected SqlConnection _conn = new SqlConnection(connectionString);
     }
 }

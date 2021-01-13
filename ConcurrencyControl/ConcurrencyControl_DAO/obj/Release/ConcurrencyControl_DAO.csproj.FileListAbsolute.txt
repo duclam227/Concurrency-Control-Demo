@@ -1,8 +1,0 @@
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\bin\Release\ConcurrencyControl_DAO.dll
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\bin\Release\ConcurrencyControl_DAO.pdb
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.Properties.Resources.resources
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.csproj.GenerateResource.cache
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.csproj.CoreCompileInputs.cache
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.dll
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.pdb
-D:\Downloads\DA_QLBDS\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_DAO\obj\Release\ConcurrencyControl_DAO.csprojAssemblyReference.cache
