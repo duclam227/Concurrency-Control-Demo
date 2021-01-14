@@ -37,6 +37,11 @@ namespace ConcurrencyControl_BUS
             return result;
         }
 
+        public DataTable GetEmployees()
+        {
+            return HopDongDAO.Instance.GetEmployees();
+        }
+
         public DataTable GetContractByID(string id)
         {
             DataTable result;

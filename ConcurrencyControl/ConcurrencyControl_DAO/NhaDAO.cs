@@ -54,6 +54,100 @@ namespace ConcurrencyControl_DAO
             return result;
         }
 
+        public DataTable GetHouseOwners()
+        {
+            DataTable dt = new DataTable();
+            string query = "select MACHUNHA from CHUNHA";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(dt);
+
+            return dt;
+        }
+
+        public Tuple<DataTable, float, int> CalculateAverageRentPriceFixed()
+        {
+            DataTable data = new DataTable();
+            string command = "sp_TinhTBGiaNhaThue_Fix";
+
+            SqlCommand cmd = new SqlCommand(command, _conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@giaTB", SqlDbType.Int).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@soluongNha", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.SelectCommand = cmd;
+
+            adapter.Fill(data);
+            _conn.Close();
+
+            float avg = float.Parse(cmd.Parameters["@giaTB"].Value.ToString());
+            int amount = int.Parse(cmd.Parameters["@soluongNha"].Value.ToString());
+
+            Tuple<DataTable, float, int> result = new Tuple<DataTable, float, int>(data, avg, amount);
+            return result;
+        }
+
+        public Tuple<DataTable, float, int> CalculateAverageRentPrice()
+        {
+            DataTable data = new DataTable();
+            string command = "sp_TinhTBGiaNhaThue";
+
+            SqlCommand cmd = new SqlCommand(command, _conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@giaTB", SqlDbType.Int).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@soluongNha", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.SelectCommand = cmd;
+
+            adapter.Fill(data);
+            _conn.Close();
+
+            float avg = float.Parse(cmd.Parameters["@giaTB"].Value.ToString());
+            int amount = int.Parse(cmd.Parameters["@soluongNha"].Value.ToString());
+
+            Tuple<DataTable, float, int> result = new Tuple<DataTable, float, int>(data, avg, amount);
+            return result;
+        }
+
+        public DataTable GetBranches()
+        {
+            _conn.Open();
+            SqlCommand cmd = _conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT MACHINHANH FROM CHINHANH";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            _conn.Close();
+
+            return dt;
+        }
+
+        public DataTable GetTypes()
+        {
+            _conn.Open();
+            SqlCommand cmd = _conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT MALN FROM LOAINHA";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            _conn.Close();
+
+            return dt;
+        }
+
         public DataTable GetAllHouses()
         {
             string query = "select * from Nha";
@@ -104,6 +198,7 @@ namespace ConcurrencyControl_DAO
             _conn.Close();
         }
 
+<<<<<<< Updated upstream
         public void UpdateEndDate(string id, DateTime newDate)
         {
             string query = $"exec _Update_AD_Days '{id}', '{newDate}'";
@@ -190,6 +285,30 @@ namespace ConcurrencyControl_DAO
             _conn.Close();
 
             return _SDT;
+=======
+        public void AddHouse(string manha, string maln, string machunha, int slphong, int loaigd, float gia, string dieukien, string sonha, string duong, string phuong, string quan, string tp, DateTime ngayhethan)
+        {
+            SqlCommand cmd = new SqlCommand("sp_InsertNewHome", _conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@MANHA", SqlDbType.VarChar).Value = manha;
+            cmd.Parameters.Add("@MALN", SqlDbType.VarChar).Value = maln;
+            cmd.Parameters.Add("@MACHUNHA", SqlDbType.VarChar).Value = machunha;
+            cmd.Parameters.Add("@SlgPhong", SqlDbType.Int).Value = slphong;
+            cmd.Parameters.Add("@LoaiGiaoDich", SqlDbType.Bit).Value = loaigd;
+            cmd.Parameters.Add("@Gia", SqlDbType.Float).Value = gia;
+            cmd.Parameters.Add("@DieuKien", SqlDbType.NVarChar).Value = dieukien;
+            cmd.Parameters.Add("@SoNha", SqlDbType.NVarChar).Value = sonha;
+            cmd.Parameters.Add("@Duong", SqlDbType.NVarChar).Value = duong;
+            cmd.Parameters.Add("@Phuong", SqlDbType.NVarChar).Value = phuong;
+            cmd.Parameters.Add("@Quan", SqlDbType.NVarChar).Value = quan;
+            cmd.Parameters.Add("@TP", SqlDbType.NVarChar).Value = tp;
+            cmd.Parameters.Add("@NgayHetHan", SqlDbType.DateTime).Value = ngayhethan;
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+>>>>>>> Stashed changes
         }
     }
 }

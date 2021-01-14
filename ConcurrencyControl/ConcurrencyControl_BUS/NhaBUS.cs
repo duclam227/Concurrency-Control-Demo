@@ -26,10 +26,35 @@ namespace ConcurrencyControl_BUS
             return result;
         }
 
+        public DataTable GetHouseOwners()
+        {
+            return NhaDAO.Instance.GetHouseOwners();
+        }
+
+        public Tuple<DataTable, float, int> CalculateAverageRentPrice()
+        {
+            return NhaDAO.Instance.CalculateAverageRentPrice();
+        }
+
+        public DataTable GetTypes()
+        {
+            return NhaDAO.Instance.GetTypes();
+        }
+
         public DataTable GetAllHouses()
         {
             DataTable data = NhaDAO.Instance.GetAllHouses();
             return data;
+        }
+
+        public Tuple<DataTable, float, int> CalculateAverageRentPriceFixed()
+        {
+            return NhaDAO.Instance.CalculateAverageRentPriceFixed();
+        }
+
+        public DataTable GetBranches()
+        {
+            return NhaDAO.Instance.GetBranches();
         }
 
         public void ChangeToRent(string id)
@@ -44,6 +69,7 @@ namespace ConcurrencyControl_BUS
             return result;
         }
 
+<<<<<<< Updated upstream
         public void UpdateEndDate(string id, DateTime newDate)
         {
             ConcurrencyControl_DAO.NhaDAO.Instance.UpdateEndDate(id, newDate);
@@ -88,6 +114,11 @@ namespace ConcurrencyControl_BUS
             _SDT = ConcurrencyControl_DAO.NhaDAO.Instance.SellHouse(_id);
 
             return _SDT;
+=======
+        public void AddHouse(string manha, string maln, string machunha, int slphong, int loaigd, float gia, string dieukien, string sonha, string duong, string phuong, string quan, string tp, DateTime ngayhethan)
+        {
+            NhaDAO.Instance.AddHouse(manha, maln, machunha, slphong, loaigd, gia, dieukien, sonha, duong, phuong, quan, tp, ngayhethan);
+>>>>>>> Stashed changes
         }
     }
 }

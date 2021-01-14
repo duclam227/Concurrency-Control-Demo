@@ -49,6 +49,16 @@ namespace ConcurrencyControl_DAO
             return result;
         }
 
+        public DataTable GetEmployees()
+        {
+            DataTable dt = new DataTable();
+            string query = "select MANV from NHANVIEN";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(dt);
+
+            return dt;
+        }
+
         public DataTable GetContractByIDFixed(string id)
         {
             DataTable result = new DataTable();
