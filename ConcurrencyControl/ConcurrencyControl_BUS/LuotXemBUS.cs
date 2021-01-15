@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ConcurrencyControl_DAO;
+using System.Data.SqlClient;
+
 
 namespace ConcurrencyControl_BUS
 {
@@ -21,51 +24,50 @@ namespace ConcurrencyControl_BUS
 
         public void AddViewing(string houseId, string cusId, string comment, DateTime date)
         {
-            LuotXemDAO.Instance.AddViewing(houseId, cusId, comment, date);
+            ConcurrencyControl_DAO.LuotXemDAO.Instance.AddViewing(houseId, cusId, comment, date);
         }
 
         public void AddViewingFixed(string houseId, string cusId, string comment, DateTime date)
         {
-            LuotXemDAO.Instance.AddViewingFixed(houseId, cusId, comment, date);
+            ConcurrencyControl_DAO.LuotXemDAO.Instance.AddViewingFixed(houseId, cusId, comment, date);
         }
 
         public Tuple<DataTable, int> GetViewingOfCustomer(string id)
         {
-            return LuotXemDAO.Instance.GetViewingOfCustomer(id);
+            return ConcurrencyControl_DAO.LuotXemDAO.Instance.GetViewingOfCustomer(id);
         }
 
         public Tuple<DataTable, int> GetViewingOfCustomerFixed(string id)
         {
-            return LuotXemDAO.Instance.GetViewingOfCustomerFixed(id);
+            return ConcurrencyControl_DAO.LuotXemDAO.Instance.GetViewingOfCustomerFixed(id);
         }
 
         public void DeleteViewing(string id, DateTime date)
         {
-            LuotXemDAO.Instance.DeleteViewing(id, date);
+            ConcurrencyControl_DAO.LuotXemDAO.Instance.DeleteViewing(id, date);
         }
-<<<<<<< Updated upstream
-=======
+
 
         public void AddViewingWithoutWait(string houseID, string cusID, string comment, DateTime date)
         {
-            LuotXemDAO.Instance.AddViewingWithoutWait(houseID, cusID, comment, date);
+            ConcurrencyControl_DAO.LuotXemDAO.Instance.AddViewingWithoutWait(houseID, cusID, comment, date);
         }
 
         public Tuple<DataTable, int> GetViewingOfHouse(string houseID)
         {
-            return LuotXemDAO.Instance.GetViewingOfHouse(houseID);
+            return ConcurrencyControl_DAO.LuotXemDAO.Instance.GetViewingOfHouse(houseID);
         }
 
         public Tuple<DataTable, int> GetViewingOfHouseFixed(string houseID)
         {
-            return LuotXemDAO.Instance.GetViewingOfHouseFixed(houseID);
+            return ConcurrencyControl_DAO.LuotXemDAO.Instance.GetViewingOfHouseFixed(houseID);
         }
 
         public DataTable See_View(string _So, string _Duong, string _Phuong, string _Quan, string _TP)
         {
             DataTable result;
 
-            result = LuotXemDAO.Instance.See_View(_So, _Duong, _Phuong, _Quan, _TP);
+            result = ConcurrencyControl_DAO.LuotXemDAO.Instance.See_View(_So, _Duong, _Phuong, _Quan, _TP);
             return result;
         }
 
@@ -73,9 +75,9 @@ namespace ConcurrencyControl_BUS
         {
             DataTable result;
 
-            result = LuotXemDAO.Instance.See_View_Fixed(_So, _Duong, _Phuong, _Quan, _TP);
+            result = ConcurrencyControl_DAO.LuotXemDAO.Instance.See_View_Fixed(_So, _Duong, _Phuong, _Quan, _TP);
             return result;
         }
->>>>>>> Stashed changes
+
     }
 }

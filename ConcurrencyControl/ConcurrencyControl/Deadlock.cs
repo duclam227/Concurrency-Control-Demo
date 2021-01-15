@@ -17,7 +17,7 @@ namespace ConcurrencyControl
             InitializeComponent();
         }
 
-<<<<<<< Updated upstream
+
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable NHATABLE = ConcurrencyControl_BUS.NhaBUS.Instance.ShowListHouse();
@@ -55,11 +55,12 @@ namespace ConcurrencyControl
             string id = textBox2.Text;
             string _SDT;
 
-            _SDT = ConcurrencyControl_BUS.NhaBUS.Instance.SellHouse(id);    
+            _SDT = ConcurrencyControl_BUS.NhaBUS.Instance.SellHouse(id);
             MessageBox.Show($"So dien thoai chu nha: {_SDT}");
             DataTable NhaTable = ConcurrencyControl_BUS.NhaBUS.Instance.GetAHouseData_Fix(id);
             dataGridView1.DataSource = NhaTable;
-=======
+        }
+
         private void Cycle_button4_Click(object sender, EventArgs e)
         {
             DataTable AllHouse = ConcurrencyControl_BUS.NhaBUS.Instance.GetAllHouses();
@@ -92,7 +93,7 @@ namespace ConcurrencyControl
                 Cycle_textBox4.Text, Cycle_textBox5.Text, Cycle_textBox6.Text, Cycle_textBox7.Text, Cycle_textBox8.Text);
 
             Cycle_dataGridView2.DataSource = AllHouse;
->>>>>>> Stashed changes
+
         }
     }
 }

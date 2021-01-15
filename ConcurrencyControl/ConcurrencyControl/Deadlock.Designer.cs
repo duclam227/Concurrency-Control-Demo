@@ -73,19 +73,19 @@ namespace ConcurrencyControl
             this.button2 = new System.Windows.Forms.Button();
             this.Change_DL_fix = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-<<<<<<< Updated upstream
+
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDL_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-=======
+
             this.tabPage1.SuspendLayout();
             this.Cycle_groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView2)).BeginInit();
             this.Cycle_groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView1)).BeginInit();
->>>>>>> Stashed changes
+
             this.SuspendLayout();
             // 
             // tabControl1
@@ -101,11 +101,10 @@ namespace ConcurrencyControl
             // 
             // tabPage1
             // 
-<<<<<<< Updated upstream
-=======
+
             this.tabPage1.Controls.Add(this.Cycle_groupBox2);
             this.tabPage1.Controls.Add(this.Cycle_groupBox1);
->>>>>>> Stashed changes
+
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
@@ -363,11 +362,11 @@ namespace ConcurrencyControl
             // 
             // tabPage2
             // 
-<<<<<<< Updated upstream
+
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
-=======
->>>>>>> Stashed changes
+
+
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
@@ -525,7 +524,7 @@ namespace ConcurrencyControl
             this.Name = "Deadlock";
             this.Text = "Deadlock";
             this.tabControl1.ResumeLayout(false);
-<<<<<<< Updated upstream
+
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -533,7 +532,7 @@ namespace ConcurrencyControl
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDL_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-=======
+
             this.tabPage1.ResumeLayout(false);
             this.Cycle_groupBox2.ResumeLayout(false);
             this.Cycle_groupBox2.PerformLayout();
@@ -541,7 +540,7 @@ namespace ConcurrencyControl
             this.Cycle_groupBox1.ResumeLayout(false);
             this.Cycle_groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView1)).EndInit();
->>>>>>> Stashed changes
+
             this.ResumeLayout(false);
 
         }
@@ -551,7 +550,7 @@ namespace ConcurrencyControl
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-<<<<<<< Updated upstream
+
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView CDL_1;
@@ -566,7 +565,7 @@ namespace ConcurrencyControl
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Change_DL_fix;
-=======
+
         private System.Windows.Forms.GroupBox Cycle_groupBox2;
         private System.Windows.Forms.Label Cycle_label9;
         private System.Windows.Forms.Label Cycle_lable8;
@@ -593,6 +592,6 @@ namespace ConcurrencyControl
         private System.Windows.Forms.TextBox Cycle_textBox7;
         private System.Windows.Forms.TextBox Cycle_textBox6;
         private System.Windows.Forms.TextBox Cycle_textBox5;
->>>>>>> Stashed changes
+
     }
 }
