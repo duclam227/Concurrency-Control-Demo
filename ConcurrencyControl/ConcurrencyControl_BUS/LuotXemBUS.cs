@@ -43,5 +43,39 @@ namespace ConcurrencyControl_BUS
         {
             LuotXemDAO.Instance.DeleteViewing(id, date);
         }
+<<<<<<< Updated upstream
+=======
+
+        public void AddViewingWithoutWait(string houseID, string cusID, string comment, DateTime date)
+        {
+            LuotXemDAO.Instance.AddViewingWithoutWait(houseID, cusID, comment, date);
+        }
+
+        public Tuple<DataTable, int> GetViewingOfHouse(string houseID)
+        {
+            return LuotXemDAO.Instance.GetViewingOfHouse(houseID);
+        }
+
+        public Tuple<DataTable, int> GetViewingOfHouseFixed(string houseID)
+        {
+            return LuotXemDAO.Instance.GetViewingOfHouseFixed(houseID);
+        }
+
+        public DataTable See_View(string _So, string _Duong, string _Phuong, string _Quan, string _TP)
+        {
+            DataTable result;
+
+            result = LuotXemDAO.Instance.See_View(_So, _Duong, _Phuong, _Quan, _TP);
+            return result;
+        }
+
+        public DataTable See_View_Fixed(string _So, string _Duong, string _Phuong, string _Quan, string _TP)
+        {
+            DataTable result;
+
+            result = LuotXemDAO.Instance.See_View_Fixed(_So, _Duong, _Phuong, _Quan, _TP);
+            return result;
+        }
+>>>>>>> Stashed changes
     }
 }

@@ -17,6 +17,7 @@ namespace ConcurrencyControl
             InitializeComponent();
         }
 
+<<<<<<< Updated upstream
         private void button1_Click(object sender, EventArgs e)
         {
             DataTable NHATABLE = ConcurrencyControl_BUS.NhaBUS.Instance.ShowListHouse();
@@ -58,6 +59,40 @@ namespace ConcurrencyControl
             MessageBox.Show($"So dien thoai chu nha: {_SDT}");
             DataTable NhaTable = ConcurrencyControl_BUS.NhaBUS.Instance.GetAHouseData_Fix(id);
             dataGridView1.DataSource = NhaTable;
+=======
+        private void Cycle_button4_Click(object sender, EventArgs e)
+        {
+            DataTable AllHouse = ConcurrencyControl_BUS.NhaBUS.Instance.GetAllHouses();
+            Cycle_dataGridView1.DataSource = AllHouse;
+        }
+
+        private void Cycle_button1_Click(object sender, EventArgs e)
+        {
+            DateTime date = Cycle_dateTimePicker1.Value;
+            string cmt = Cycle_textBox1.Text;
+            string house = Cycle_textBox2.Text;
+            string cus = Cycle_textBox3.Text;
+
+            ConcurrencyControl_BUS.LuotXemBUS.Instance.AddViewing(house, cus, cmt, date);
+            MessageBox.Show("Completed");                  
+        }
+
+        private void Cycle_button2_Click(object sender, EventArgs e)
+        {
+            DataTable AllHouse = ConcurrencyControl_BUS.LuotXemBUS.Instance.See_View(
+                Cycle_textBox4.Text, Cycle_textBox5.Text, Cycle_textBox6.Text, Cycle_textBox7.Text, Cycle_textBox8.Text);
+            
+            Cycle_dataGridView2.DataSource = AllHouse;
+
+        }
+
+        private void Cycle_button3_Click(object sender, EventArgs e)
+        {
+            DataTable AllHouse = ConcurrencyControl_BUS.LuotXemBUS.Instance.See_View_Fixed(
+                Cycle_textBox4.Text, Cycle_textBox5.Text, Cycle_textBox6.Text, Cycle_textBox7.Text, Cycle_textBox8.Text);
+
+            Cycle_dataGridView2.DataSource = AllHouse;
+>>>>>>> Stashed changes
         }
     }
 }

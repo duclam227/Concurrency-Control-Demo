@@ -31,6 +31,32 @@ namespace ConcurrencyControl
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Cycle_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Cycle_textBox8 = new System.Windows.Forms.TextBox();
+            this.Cycle_textBox7 = new System.Windows.Forms.TextBox();
+            this.Cycle_textBox6 = new System.Windows.Forms.TextBox();
+            this.Cycle_textBox5 = new System.Windows.Forms.TextBox();
+            this.Cycle_label7 = new System.Windows.Forms.Label();
+            this.Cycle_label9 = new System.Windows.Forms.Label();
+            this.Cycle_lable8 = new System.Windows.Forms.Label();
+            this.Cycle_label6 = new System.Windows.Forms.Label();
+            this.Cycle_button3 = new System.Windows.Forms.Button();
+            this.Cycle_button2 = new System.Windows.Forms.Button();
+            this.Cycle_label5 = new System.Windows.Forms.Label();
+            this.Cycle_textBox4 = new System.Windows.Forms.TextBox();
+            this.Cycle_dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Cycle_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Cycle_button4 = new System.Windows.Forms.Button();
+            this.Cycle_button1 = new System.Windows.Forms.Button();
+            this.Cycle_textBox3 = new System.Windows.Forms.TextBox();
+            this.Cycle_textBox2 = new System.Windows.Forms.TextBox();
+            this.Cycle_label4 = new System.Windows.Forms.Label();
+            this.Cycle_label3 = new System.Windows.Forms.Label();
+            this.Cycle_textBox1 = new System.Windows.Forms.TextBox();
+            this.Cycle_dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Cycle_label2 = new System.Windows.Forms.Label();
+            this.Cycle_label1 = new System.Windows.Forms.Label();
+            this.Cycle_dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,11 +73,19 @@ namespace ConcurrencyControl
             this.button2 = new System.Windows.Forms.Button();
             this.Change_DL_fix = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+<<<<<<< Updated upstream
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDL_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+=======
+            this.tabPage1.SuspendLayout();
+            this.Cycle_groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView2)).BeginInit();
+            this.Cycle_groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView1)).BeginInit();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // tabControl1
@@ -67,6 +101,11 @@ namespace ConcurrencyControl
             // 
             // tabPage1
             // 
+<<<<<<< Updated upstream
+=======
+            this.tabPage1.Controls.Add(this.Cycle_groupBox2);
+            this.tabPage1.Controls.Add(this.Cycle_groupBox1);
+>>>>>>> Stashed changes
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
@@ -76,10 +115,259 @@ namespace ConcurrencyControl
             this.tabPage1.Text = "Cycle Deadlock";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // Cycle_groupBox2
+            // 
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_textBox8);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_textBox7);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_textBox6);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_textBox5);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_label7);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_label9);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_lable8);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_label6);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_button3);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_button2);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_label5);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_textBox4);
+            this.Cycle_groupBox2.Controls.Add(this.Cycle_dataGridView2);
+            this.Cycle_groupBox2.Location = new System.Drawing.Point(0, 337);
+            this.Cycle_groupBox2.Name = "Cycle_groupBox2";
+            this.Cycle_groupBox2.Size = new System.Drawing.Size(1070, 409);
+            this.Cycle_groupBox2.TabIndex = 1;
+            this.Cycle_groupBox2.TabStop = false;
+            this.Cycle_groupBox2.Text = "Giao tác 2";
+            // 
+            // Cycle_textBox8
+            // 
+            this.Cycle_textBox8.Location = new System.Drawing.Point(514, 118);
+            this.Cycle_textBox8.Name = "Cycle_textBox8";
+            this.Cycle_textBox8.Size = new System.Drawing.Size(131, 26);
+            this.Cycle_textBox8.TabIndex = 12;
+            // 
+            // Cycle_textBox7
+            // 
+            this.Cycle_textBox7.Location = new System.Drawing.Point(514, 78);
+            this.Cycle_textBox7.Name = "Cycle_textBox7";
+            this.Cycle_textBox7.Size = new System.Drawing.Size(131, 26);
+            this.Cycle_textBox7.TabIndex = 11;
+            // 
+            // Cycle_textBox6
+            // 
+            this.Cycle_textBox6.Location = new System.Drawing.Point(514, 36);
+            this.Cycle_textBox6.Name = "Cycle_textBox6";
+            this.Cycle_textBox6.Size = new System.Drawing.Size(131, 26);
+            this.Cycle_textBox6.TabIndex = 10;
+            // 
+            // Cycle_textBox5
+            // 
+            this.Cycle_textBox5.Location = new System.Drawing.Point(125, 78);
+            this.Cycle_textBox5.Name = "Cycle_textBox5";
+            this.Cycle_textBox5.Size = new System.Drawing.Size(200, 26);
+            this.Cycle_textBox5.TabIndex = 9;
+            // 
+            // Cycle_label7
+            // 
+            this.Cycle_label7.AutoSize = true;
+            this.Cycle_label7.Location = new System.Drawing.Point(400, 30);
+            this.Cycle_label7.Name = "Cycle_label7";
+            this.Cycle_label7.Size = new System.Drawing.Size(109, 20);
+            this.Cycle_label7.TabIndex = 8;
+            this.Cycle_label7.Text = "Nhập phường:";
+            // 
+            // Cycle_label9
+            // 
+            this.Cycle_label9.AutoSize = true;
+            this.Cycle_label9.Location = new System.Drawing.Point(400, 118);
+            this.Cycle_label9.Name = "Cycle_label9";
+            this.Cycle_label9.Size = new System.Drawing.Size(74, 20);
+            this.Cycle_label9.TabIndex = 7;
+            this.Cycle_label9.Text = "Nhập TP:";
+            // 
+            // Cycle_lable8
+            // 
+            this.Cycle_lable8.AutoSize = true;
+            this.Cycle_lable8.Location = new System.Drawing.Point(400, 75);
+            this.Cycle_lable8.Name = "Cycle_lable8";
+            this.Cycle_lable8.Size = new System.Drawing.Size(91, 20);
+            this.Cycle_lable8.TabIndex = 6;
+            this.Cycle_lable8.Text = "Nhập quận:";
+            // 
+            // Cycle_label6
+            // 
+            this.Cycle_label6.AutoSize = true;
+            this.Cycle_label6.Location = new System.Drawing.Point(6, 78);
+            this.Cycle_label6.Name = "Cycle_label6";
+            this.Cycle_label6.Size = new System.Drawing.Size(100, 20);
+            this.Cycle_label6.TabIndex = 5;
+            this.Cycle_label6.Text = "Nhập đường:";
+            // 
+            // Cycle_button3
+            // 
+            this.Cycle_button3.Location = new System.Drawing.Point(894, 75);
+            this.Cycle_button3.Name = "Cycle_button3";
+            this.Cycle_button3.Size = new System.Drawing.Size(149, 43);
+            this.Cycle_button3.TabIndex = 4;
+            this.Cycle_button3.Text = "Xem (Sửa lỗi)";
+            this.Cycle_button3.UseVisualStyleBackColor = true;
+            this.Cycle_button3.Click += new System.EventHandler(this.Cycle_button3_Click);
+            // 
+            // Cycle_button2
+            // 
+            this.Cycle_button2.Location = new System.Drawing.Point(704, 75);
+            this.Cycle_button2.Name = "Cycle_button2";
+            this.Cycle_button2.Size = new System.Drawing.Size(155, 43);
+            this.Cycle_button2.TabIndex = 3;
+            this.Cycle_button2.Text = "Xem (Lỗi)";
+            this.Cycle_button2.UseVisualStyleBackColor = true;
+            this.Cycle_button2.Click += new System.EventHandler(this.Cycle_button2_Click);
+            // 
+            // Cycle_label5
+            // 
+            this.Cycle_label5.AutoSize = true;
+            this.Cycle_label5.Location = new System.Drawing.Point(6, 36);
+            this.Cycle_label5.Name = "Cycle_label5";
+            this.Cycle_label5.Size = new System.Drawing.Size(103, 20);
+            this.Cycle_label5.TabIndex = 2;
+            this.Cycle_label5.Text = "Nhập số nhà:";
+            // 
+            // Cycle_textBox4
+            // 
+            this.Cycle_textBox4.Location = new System.Drawing.Point(125, 30);
+            this.Cycle_textBox4.Name = "Cycle_textBox4";
+            this.Cycle_textBox4.Size = new System.Drawing.Size(200, 26);
+            this.Cycle_textBox4.TabIndex = 1;
+            // 
+            // Cycle_dataGridView2
+            // 
+            this.Cycle_dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cycle_dataGridView2.Location = new System.Drawing.Point(5, 175);
+            this.Cycle_dataGridView2.Name = "Cycle_dataGridView2";
+            this.Cycle_dataGridView2.RowHeadersWidth = 62;
+            this.Cycle_dataGridView2.RowTemplate.Height = 28;
+            this.Cycle_dataGridView2.Size = new System.Drawing.Size(1069, 207);
+            this.Cycle_dataGridView2.TabIndex = 0;
+            // 
+            // Cycle_groupBox1
+            // 
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_button4);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_button1);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_textBox3);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_textBox2);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_label4);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_label3);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_textBox1);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_dateTimePicker1);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_label2);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_label1);
+            this.Cycle_groupBox1.Controls.Add(this.Cycle_dataGridView1);
+            this.Cycle_groupBox1.Location = new System.Drawing.Point(-4, 0);
+            this.Cycle_groupBox1.Name = "Cycle_groupBox1";
+            this.Cycle_groupBox1.Size = new System.Drawing.Size(1074, 331);
+            this.Cycle_groupBox1.TabIndex = 0;
+            this.Cycle_groupBox1.TabStop = false;
+            this.Cycle_groupBox1.Text = "Giao tác 1";
+            // 
+            // Cycle_button4
+            // 
+            this.Cycle_button4.Location = new System.Drawing.Point(898, 229);
+            this.Cycle_button4.Name = "Cycle_button4";
+            this.Cycle_button4.Size = new System.Drawing.Size(149, 43);
+            this.Cycle_button4.TabIndex = 10;
+            this.Cycle_button4.Text = "Xem nhà";
+            this.Cycle_button4.UseVisualStyleBackColor = true;
+            this.Cycle_button4.Click += new System.EventHandler(this.Cycle_button4_Click);
+            // 
+            // Cycle_button1
+            // 
+            this.Cycle_button1.Location = new System.Drawing.Point(708, 229);
+            this.Cycle_button1.Name = "Cycle_button1";
+            this.Cycle_button1.Size = new System.Drawing.Size(155, 43);
+            this.Cycle_button1.TabIndex = 9;
+            this.Cycle_button1.Text = "Thay đổi";
+            this.Cycle_button1.UseVisualStyleBackColor = true;
+            this.Cycle_button1.Click += new System.EventHandler(this.Cycle_button1_Click);
+            // 
+            // Cycle_textBox3
+            // 
+            this.Cycle_textBox3.Location = new System.Drawing.Point(518, 263);
+            this.Cycle_textBox3.Name = "Cycle_textBox3";
+            this.Cycle_textBox3.Size = new System.Drawing.Size(131, 26);
+            this.Cycle_textBox3.TabIndex = 8;
+            // 
+            // Cycle_textBox2
+            // 
+            this.Cycle_textBox2.Location = new System.Drawing.Point(518, 210);
+            this.Cycle_textBox2.Name = "Cycle_textBox2";
+            this.Cycle_textBox2.Size = new System.Drawing.Size(131, 26);
+            this.Cycle_textBox2.TabIndex = 7;
+            // 
+            // Cycle_label4
+            // 
+            this.Cycle_label4.AutoSize = true;
+            this.Cycle_label4.Location = new System.Drawing.Point(404, 263);
+            this.Cycle_label4.Name = "Cycle_label4";
+            this.Cycle_label4.Size = new System.Drawing.Size(103, 20);
+            this.Cycle_label4.TabIndex = 6;
+            this.Cycle_label4.Text = "Nhập mã KH:";
+            // 
+            // Cycle_label3
+            // 
+            this.Cycle_label3.AutoSize = true;
+            this.Cycle_label3.Location = new System.Drawing.Point(404, 210);
+            this.Cycle_label3.Name = "Cycle_label3";
+            this.Cycle_label3.Size = new System.Drawing.Size(108, 20);
+            this.Cycle_label3.TabIndex = 5;
+            this.Cycle_label3.Text = "Nhập mã nhà:";
+            // 
+            // Cycle_textBox1
+            // 
+            this.Cycle_textBox1.Location = new System.Drawing.Point(129, 257);
+            this.Cycle_textBox1.Name = "Cycle_textBox1";
+            this.Cycle_textBox1.Size = new System.Drawing.Size(200, 26);
+            this.Cycle_textBox1.TabIndex = 4;
+            // 
+            // Cycle_dateTimePicker1
+            // 
+            this.Cycle_dateTimePicker1.Location = new System.Drawing.Point(129, 204);
+            this.Cycle_dateTimePicker1.Name = "Cycle_dateTimePicker1";
+            this.Cycle_dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.Cycle_dateTimePicker1.TabIndex = 3;
+            // 
+            // Cycle_label2
+            // 
+            this.Cycle_label2.AutoSize = true;
+            this.Cycle_label2.Location = new System.Drawing.Point(7, 263);
+            this.Cycle_label2.Name = "Cycle_label2";
+            this.Cycle_label2.Size = new System.Drawing.Size(116, 20);
+            this.Cycle_label2.TabIndex = 2;
+            this.Cycle_label2.Text = "Nhập nhận xét:";
+            // 
+            // Cycle_label1
+            // 
+            this.Cycle_label1.AutoSize = true;
+            this.Cycle_label1.Location = new System.Drawing.Point(6, 209);
+            this.Cycle_label1.Name = "Cycle_label1";
+            this.Cycle_label1.Size = new System.Drawing.Size(93, 20);
+            this.Cycle_label1.TabIndex = 1;
+            this.Cycle_label1.Text = "Nhập ngày: ";
+            // 
+            // Cycle_dataGridView1
+            // 
+            this.Cycle_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cycle_dataGridView1.Location = new System.Drawing.Point(4, 25);
+            this.Cycle_dataGridView1.Name = "Cycle_dataGridView1";
+            this.Cycle_dataGridView1.RowHeadersWidth = 62;
+            this.Cycle_dataGridView1.RowTemplate.Height = 28;
+            this.Cycle_dataGridView1.Size = new System.Drawing.Size(1070, 171);
+            this.Cycle_dataGridView1.TabIndex = 0;
+            // 
             // tabPage2
             // 
+<<<<<<< Updated upstream
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
+=======
+>>>>>>> Stashed changes
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
@@ -237,6 +525,7 @@ namespace ConcurrencyControl
             this.Name = "Deadlock";
             this.Text = "Deadlock";
             this.tabControl1.ResumeLayout(false);
+<<<<<<< Updated upstream
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -244,6 +533,15 @@ namespace ConcurrencyControl
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CDL_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+=======
+            this.tabPage1.ResumeLayout(false);
+            this.Cycle_groupBox2.ResumeLayout(false);
+            this.Cycle_groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView2)).EndInit();
+            this.Cycle_groupBox1.ResumeLayout(false);
+            this.Cycle_groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cycle_dataGridView1)).EndInit();
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
 
         }
@@ -253,6 +551,7 @@ namespace ConcurrencyControl
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+<<<<<<< Updated upstream
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView CDL_1;
@@ -267,5 +566,33 @@ namespace ConcurrencyControl
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Change_DL_fix;
+=======
+        private System.Windows.Forms.GroupBox Cycle_groupBox2;
+        private System.Windows.Forms.Label Cycle_label9;
+        private System.Windows.Forms.Label Cycle_lable8;
+        private System.Windows.Forms.Label Cycle_label6;
+        private System.Windows.Forms.Button Cycle_button3;
+        private System.Windows.Forms.Button Cycle_button2;
+        private System.Windows.Forms.Label Cycle_label5;
+        private System.Windows.Forms.TextBox Cycle_textBox4;
+        private System.Windows.Forms.DataGridView Cycle_dataGridView2;
+        private System.Windows.Forms.GroupBox Cycle_groupBox1;
+        private System.Windows.Forms.Button Cycle_button1;
+        private System.Windows.Forms.TextBox Cycle_textBox3;
+        private System.Windows.Forms.TextBox Cycle_textBox2;
+        private System.Windows.Forms.Label Cycle_label4;
+        private System.Windows.Forms.Label Cycle_label3;
+        private System.Windows.Forms.TextBox Cycle_textBox1;
+        private System.Windows.Forms.DateTimePicker Cycle_dateTimePicker1;
+        private System.Windows.Forms.Label Cycle_label2;
+        private System.Windows.Forms.Label Cycle_label1;
+        private System.Windows.Forms.DataGridView Cycle_dataGridView1;
+        private System.Windows.Forms.Label Cycle_label7;
+        private System.Windows.Forms.Button Cycle_button4;
+        private System.Windows.Forms.TextBox Cycle_textBox8;
+        private System.Windows.Forms.TextBox Cycle_textBox7;
+        private System.Windows.Forms.TextBox Cycle_textBox6;
+        private System.Windows.Forms.TextBox Cycle_textBox5;
+>>>>>>> Stashed changes
     }
 }
