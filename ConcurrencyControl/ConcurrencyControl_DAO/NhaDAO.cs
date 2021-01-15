@@ -198,7 +198,6 @@ namespace ConcurrencyControl_DAO
             _conn.Close();
         }
 
-<<<<<<< Updated upstream
         public void UpdateEndDate(string id, DateTime newDate)
         {
             string query = $"exec _Update_AD_Days '{id}', '{newDate}'";
@@ -285,7 +284,8 @@ namespace ConcurrencyControl_DAO
             _conn.Close();
 
             return _SDT;
-=======
+        }
+
         public void AddHouse(string manha, string maln, string machunha, int slphong, int loaigd, float gia, string dieukien, string sonha, string duong, string phuong, string quan, string tp, DateTime ngayhethan)
         {
             SqlCommand cmd = new SqlCommand("sp_InsertNewHome", _conn);
@@ -308,7 +308,6 @@ namespace ConcurrencyControl_DAO
             _conn.Open();
             cmd.ExecuteNonQuery();
             _conn.Close();
->>>>>>> Stashed changes
         }
     }
 }

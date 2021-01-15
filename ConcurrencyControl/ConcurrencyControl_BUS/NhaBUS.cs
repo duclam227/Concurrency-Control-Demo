@@ -69,7 +69,6 @@ namespace ConcurrencyControl_BUS
             return result;
         }
 
-<<<<<<< Updated upstream
         public void UpdateEndDate(string id, DateTime newDate)
         {
             ConcurrencyControl_DAO.NhaDAO.Instance.UpdateEndDate(id, newDate);
@@ -114,11 +113,11 @@ namespace ConcurrencyControl_BUS
             _SDT = ConcurrencyControl_DAO.NhaDAO.Instance.SellHouse(_id);
 
             return _SDT;
-=======
+        }
+
         public void AddHouse(string manha, string maln, string machunha, int slphong, int loaigd, float gia, string dieukien, string sonha, string duong, string phuong, string quan, string tp, DateTime ngayhethan)
         {
             NhaDAO.Instance.AddHouse(manha, maln, machunha, slphong, loaigd, gia, dieukien, sonha, duong, phuong, quan, tp, ngayhethan);
->>>>>>> Stashed changes
         }
     }
 }

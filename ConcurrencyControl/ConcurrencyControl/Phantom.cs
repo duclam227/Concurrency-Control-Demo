@@ -30,6 +30,13 @@ namespace ConcurrencyControl
             {
                 cbb_maloainha.Items.Add(dr["MALN"].ToString());
             }
+
+            //load khách hàng
+            DataTable customers = KhachHangBUS.Instance.GetAll();
+            foreach (DataRow dr in customers.Rows)
+            {
+                Tran2CustomerListComboBox.Items.Add(dr["MAKH"].ToString());
+            }
         }
 
         private void AverageRentButton_Click(object sender, EventArgs e)
@@ -61,5 +68,33 @@ namespace ConcurrencyControl
 
             NhaBUS.Instance.AddHouse(tb_manha.Text, cbb_maloainha.SelectedItem.ToString(), cbb_machunha.SelectedItem.ToString(), int.Parse(tb_soluongphong.Text), int.Parse(tb_loaigiaodich.Text), float.Parse(tb_gia.Text), tb_dieukien.Text, tb_sonha.Text, tb_duong.Text, tb_phuong.Text, tb_quan.Text, tb_thanhpho.Text, ngayhethan.Value);
         }
+
+        private void AddViewingButton_Click(object sender, EventArgs e)
+        {
+            LuotXemBUS.Instance.AddViewingWithoutWait(Tran2HouseIDTextBox.Text, Tran2CustomerListComboBox.SelectedItem.ToString(), Tran2CommentTextBox.Text, Tran2DateTimePicker.Value);
+        }
+
+        private void ShowHouseListButton_Click(object sender, EventArgs e)
+        {
+            DataTable allHouses = NhaBUS.Instance.GetAllHouses();
+            Tran1DataGridView.DataSource = allHouses;
+        }
+
+        private void Tran1ShowViewingButotn_Click(object sender, EventArgs e)
+        {
+            Tuple<DataTable, int> data = LuotXemBUS.Instance.GetViewingOfHouse(Tran1HouseIDTextBox.Text);
+
+            Tran1DataGridView.DataSource = data.Item1;
+            Tran1ViewingAmountLabel.Text = data.Item2.ToString();
+        }
+
+        private void Tran1ShowViewingFixedButton_Click(object sender, EventArgs e)
+        {
+            Tuple<DataTable, int> data = LuotXemBUS.Instance.GetViewingOfHouseFixed(Tran1HouseIDTextBox.Text);
+
+            Tran1DataGridView.DataSource = data.Item1;
+            Tran1ViewingAmountLabel.Text = data.Item2.ToString();
+        }
+
     }
 }

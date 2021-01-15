@@ -31,6 +31,25 @@ namespace ConcurrencyControl
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Tran2CustomerListComboBox = new System.Windows.Forms.ComboBox();
+            this.AddViewingButton = new System.Windows.Forms.Button();
+            this.Tran2CommentTextBox = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Tran2DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Tran2HouseIDTextBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ShowHouseListButton = new System.Windows.Forms.Button();
+            this.Tran1HouseIDTextBox = new System.Windows.Forms.TextBox();
+            this.Tran1ViewingAmountLabel = new System.Windows.Forms.Label();
+            this.Tran1ShowViewingFixedButton = new System.Windows.Forms.Button();
+            this.Tran1ShowViewingButotn = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Tran1DataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AverageRentLabel = new System.Windows.Forms.Label();
@@ -70,6 +89,10 @@ namespace ConcurrencyControl
             this.label1 = new System.Windows.Forms.Label();
             this.tb_manha = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tran1DataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DSNhaThueGridView)).BeginInit();
@@ -89,6 +112,8 @@ namespace ConcurrencyControl
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
@@ -97,6 +122,198 @@ namespace ConcurrencyControl
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Trường Hợp 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.Tran2CustomerListComboBox);
+            this.groupBox4.Controls.Add(this.AddViewingButton);
+            this.groupBox4.Controls.Add(this.Tran2CommentTextBox);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.Tran2DateTimePicker);
+            this.groupBox4.Controls.Add(this.Tran2HouseIDTextBox);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Location = new System.Drawing.Point(4, 423);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(938, 174);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Giao tác 2";
+            // 
+            // Tran2CustomerListComboBox
+            // 
+            this.Tran2CustomerListComboBox.FormattingEnabled = true;
+            this.Tran2CustomerListComboBox.Location = new System.Drawing.Point(122, 51);
+            this.Tran2CustomerListComboBox.Name = "Tran2CustomerListComboBox";
+            this.Tran2CustomerListComboBox.Size = new System.Drawing.Size(236, 24);
+            this.Tran2CustomerListComboBox.TabIndex = 10;
+            // 
+            // AddViewingButton
+            // 
+            this.AddViewingButton.Location = new System.Drawing.Point(812, 109);
+            this.AddViewingButton.Name = "AddViewingButton";
+            this.AddViewingButton.Size = new System.Drawing.Size(120, 59);
+            this.AddViewingButton.TabIndex = 9;
+            this.AddViewingButton.Text = "Thêm lượt xem";
+            this.AddViewingButton.UseVisualStyleBackColor = true;
+            this.AddViewingButton.Click += new System.EventHandler(this.AddViewingButton_Click);
+            // 
+            // Tran2CommentTextBox
+            // 
+            this.Tran2CommentTextBox.Location = new System.Drawing.Point(467, 25);
+            this.Tran2CommentTextBox.Name = "Tran2CommentTextBox";
+            this.Tran2CommentTextBox.Size = new System.Drawing.Size(465, 78);
+            this.Tran2CommentTextBox.TabIndex = 8;
+            this.Tran2CommentTextBox.Text = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(393, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Nhận xét:";
+            // 
+            // Tran2DateTimePicker
+            // 
+            this.Tran2DateTimePicker.Location = new System.Drawing.Point(122, 81);
+            this.Tran2DateTimePicker.Name = "Tran2DateTimePicker";
+            this.Tran2DateTimePicker.Size = new System.Drawing.Size(236, 22);
+            this.Tran2DateTimePicker.TabIndex = 5;
+            // 
+            // Tran2HouseIDTextBox
+            // 
+            this.Tran2HouseIDTextBox.Location = new System.Drawing.Point(122, 25);
+            this.Tran2HouseIDTextBox.Name = "Tran2HouseIDTextBox";
+            this.Tran2HouseIDTextBox.Size = new System.Drawing.Size(236, 22);
+            this.Tran2HouseIDTextBox.TabIndex = 3;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 17);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Ngày xem:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 54);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(109, 17);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Mã khách hàng:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 28);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(59, 17);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Mã nhà:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.ShowHouseListButton);
+            this.groupBox3.Controls.Add(this.Tran1HouseIDTextBox);
+            this.groupBox3.Controls.Add(this.Tran1ViewingAmountLabel);
+            this.groupBox3.Controls.Add(this.Tran1ShowViewingFixedButton);
+            this.groupBox3.Controls.Add(this.Tran1ShowViewingButotn);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.Tran1DataGridView);
+            this.groupBox3.Location = new System.Drawing.Point(4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(938, 414);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Giao tác 1";
+            // 
+            // ShowHouseListButton
+            // 
+            this.ShowHouseListButton.Location = new System.Drawing.Point(782, 11);
+            this.ShowHouseListButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ShowHouseListButton.Name = "ShowHouseListButton";
+            this.ShowHouseListButton.Size = new System.Drawing.Size(150, 39);
+            this.ShowHouseListButton.TabIndex = 49;
+            this.ShowHouseListButton.Text = "Xem danh sách nhà";
+            this.ShowHouseListButton.UseVisualStyleBackColor = true;
+            this.ShowHouseListButton.Click += new System.EventHandler(this.ShowHouseListButton_Click);
+            // 
+            // Tran1HouseIDTextBox
+            // 
+            this.Tran1HouseIDTextBox.Location = new System.Drawing.Point(109, 21);
+            this.Tran1HouseIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tran1HouseIDTextBox.Name = "Tran1HouseIDTextBox";
+            this.Tran1HouseIDTextBox.Size = new System.Drawing.Size(62, 22);
+            this.Tran1HouseIDTextBox.TabIndex = 44;
+            this.Tran1HouseIDTextBox.Text = "001";
+            // 
+            // Tran1ViewingAmountLabel
+            // 
+            this.Tran1ViewingAmountLabel.AutoSize = true;
+            this.Tran1ViewingAmountLabel.Location = new System.Drawing.Point(88, 360);
+            this.Tran1ViewingAmountLabel.Name = "Tran1ViewingAmountLabel";
+            this.Tran1ViewingAmountLabel.Size = new System.Drawing.Size(16, 17);
+            this.Tran1ViewingAmountLabel.TabIndex = 48;
+            this.Tran1ViewingAmountLabel.Text = "0";
+            // 
+            // Tran1ShowViewingFixedButton
+            // 
+            this.Tran1ShowViewingFixedButton.Location = new System.Drawing.Point(666, 360);
+            this.Tran1ShowViewingFixedButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tran1ShowViewingFixedButton.Name = "Tran1ShowViewingFixedButton";
+            this.Tran1ShowViewingFixedButton.Size = new System.Drawing.Size(130, 50);
+            this.Tran1ShowViewingFixedButton.TabIndex = 46;
+            this.Tran1ShowViewingFixedButton.Text = "Xem lượt xem (đã sửa lỗi)";
+            this.Tran1ShowViewingFixedButton.UseVisualStyleBackColor = true;
+            this.Tran1ShowViewingFixedButton.Click += new System.EventHandler(this.Tran1ShowViewingFixedButton_Click);
+            // 
+            // Tran1ShowViewingButotn
+            // 
+            this.Tran1ShowViewingButotn.Location = new System.Drawing.Point(802, 360);
+            this.Tran1ShowViewingButotn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Tran1ShowViewingButotn.Name = "Tran1ShowViewingButotn";
+            this.Tran1ShowViewingButotn.Size = new System.Drawing.Size(130, 50);
+            this.Tran1ShowViewingButotn.TabIndex = 44;
+            this.Tran1ShowViewingButotn.Text = "Xem lượt xem";
+            this.Tran1ShowViewingButotn.UseVisualStyleBackColor = true;
+            this.Tran1ShowViewingButotn.Click += new System.EventHandler(this.Tran1ShowViewingButotn_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 360);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(85, 17);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Số lượt xem:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 24);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(97, 17);
+            this.label21.TabIndex = 44;
+            this.label21.Text = "Nhập mã nhà:";
+            // 
+            // Tran1DataGridView
+            // 
+            this.Tran1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Tran1DataGridView.Location = new System.Drawing.Point(6, 55);
+            this.Tran1DataGridView.Name = "Tran1DataGridView";
+            this.Tran1DataGridView.RowHeadersWidth = 51;
+            this.Tran1DataGridView.RowTemplate.Height = 24;
+            this.Tran1DataGridView.Size = new System.Drawing.Size(926, 300);
+            this.Tran1DataGridView.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -499,6 +716,12 @@ namespace ConcurrencyControl
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Phantom";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tran1DataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -551,5 +774,24 @@ namespace ConcurrencyControl
         private System.Windows.Forms.Button AverageRentFixedButotn;
         private System.Windows.Forms.Label AverageRentLabel;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button ShowHouseListButton;
+        private System.Windows.Forms.TextBox Tran1HouseIDTextBox;
+        private System.Windows.Forms.Label Tran1ViewingAmountLabel;
+        private System.Windows.Forms.Button Tran1ShowViewingFixedButton;
+        private System.Windows.Forms.Button Tran1ShowViewingButotn;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DataGridView Tran1DataGridView;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button AddViewingButton;
+        private System.Windows.Forms.RichTextBox Tran2CommentTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker Tran2DateTimePicker;
+        private System.Windows.Forms.TextBox Tran2HouseIDTextBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox Tran2CustomerListComboBox;
     }
 }

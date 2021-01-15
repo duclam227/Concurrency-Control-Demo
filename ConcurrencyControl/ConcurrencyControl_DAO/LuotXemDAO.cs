@@ -55,6 +55,74 @@ namespace ConcurrencyControl_DAO
             _conn.Close();
         }
 
+        public void AddViewingWithoutWait(string houseID, string cusID, string comment, DateTime date)
+        {
+            string command = $"exec Add_LuotXem '{date}', N'{comment}', '{houseID}', '{cusID}'";
+            SqlCommand cmd = new SqlCommand(command, _conn);
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+        }
+
+        public Tuple<DataTable, int> GetViewingOfHouseFixed(string houseID)
+        {
+            DataTable data = new DataTable();
+            string proc = "Get_SoLuotXemFixed";
+
+            SqlCommand cmd = new SqlCommand(proc, _conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //truyền biến vào
+            cmd.Parameters.Add("@MANHA", SqlDbType.VarChar, 15).Value = houseID;
+            cmd.Parameters.Add("@SOLUOTXEM", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.SelectCommand = cmd;
+
+            adapter.Fill(data);
+
+            int amount = Convert.ToInt32(cmd.Parameters["@SOLUOTXEM"].Value);
+            _conn.Close();
+
+            Tuple<DataTable, int> result = new Tuple<DataTable, int>(data, amount);
+
+            return result;
+        }
+
+        public Tuple<DataTable, int> GetViewingOfHouse(string houseID)
+        {
+            DataTable data = new DataTable();
+            string proc = "Get_SoLuotXem";
+
+            SqlCommand cmd = new SqlCommand(proc, _conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //truyền biến vào
+            cmd.Parameters.Add("@MANHA", SqlDbType.VarChar, 15).Value = houseID;
+            cmd.Parameters.Add("@SOLUOTXEM", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.SelectCommand = cmd;
+
+            adapter.Fill(data);
+
+            int amount = Convert.ToInt32(cmd.Parameters["@SOLUOTXEM"].Value);
+            _conn.Close();
+
+            Tuple<DataTable, int> result = new Tuple<DataTable, int>(data, amount);
+
+            return result;
+        }
+
         public Tuple<DataTable, int> GetViewingOfCustomerFixed(string id)
         {
             DataTable data = new DataTable();
