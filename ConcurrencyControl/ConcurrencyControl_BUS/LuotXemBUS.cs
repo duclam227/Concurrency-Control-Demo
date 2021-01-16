@@ -19,9 +19,30 @@ namespace ConcurrencyControl_BUS
             }
         }
 
+        public DataTable See_View(string _So, string _Duong, string _Phuong, string _Quan, string _TP)
+        {
+            DataTable result;
+
+            result = LuotXemDAO.Instance.See_View(_So, _Duong, _Phuong, _Quan, _TP);
+            return result;
+        }
+
+        public DataTable See_View_Fixed(string _So, string _Duong, string _Phuong, string _Quan, string _TP)
+        {
+            DataTable result;
+
+            result = LuotXemDAO.Instance.See_View_Fixed(_So, _Duong, _Phuong, _Quan, _TP);
+            return result;
+        }
+
         public void AddViewing(string houseId, string cusId, string comment, DateTime date)
         {
             LuotXemDAO.Instance.AddViewing(houseId, cusId, comment, date);
+        }
+
+        public void AddViewingDL(string houseId, string cusId, string comment, DateTime date)
+        {
+            LuotXemDAO.Instance.AddViewingDL(houseId, cusId, comment, date);
         }
 
         public void AddViewingFixed(string houseId, string cusId, string comment, DateTime date)

@@ -25,9 +25,43 @@ namespace ConcurrencyControl_DAO
             }
         }
 
+        public DataTable See_View(string So, string Duong, string Phuong, string Quan, string TP)
+        {
+            DataTable result = new DataTable();
+
+            string query = $"exec SEE_FEEDBACK N'{So}', N'{Duong}', N'{Phuong}', N'{Quan}', N'{TP}'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+
+            adapter.Fill(result);
+
+            return result;
+        }
+
+        public DataTable See_View_Fixed(string So, string Duong, string Phuong, string Quan, string TP)
+        {
+            DataTable result = new DataTable();
+
+            string query = $"exec SEE_FEEDBACK_FIXED N'{So}', N'{Duong}', N'{Phuong}', N'{Quan}', N'{TP}'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+
+            adapter.Fill(result);
+
+            return result;
+        }
+
         public void AddViewing(string houseId, string cusId, string comment, DateTime date)
         {
             string command = $"exec themLuotXem '{date}', N'{comment}', '{houseId}', '{cusId}'";
+            SqlCommand cmd = new SqlCommand(command, _conn);
+
+            _conn.Open();
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+        }
+
+        public void AddViewingDL(string houseId, string cusId, string comment, DateTime date)
+        {
+            string command = $"exec Add_LuotXem_DL '{date}', N'{comment}', '{houseId}', '{cusId}'";
             SqlCommand cmd = new SqlCommand(command, _conn);
 
             _conn.Open();

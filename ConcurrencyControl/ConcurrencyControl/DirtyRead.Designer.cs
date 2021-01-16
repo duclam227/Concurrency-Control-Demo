@@ -38,6 +38,7 @@ namespace ConcurrencyControl
             this.inputIDTextBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.inputIDTextBox1 = new System.Windows.Forms.TextBox();
             this.Tran1DataGridView = new System.Windows.Forms.DataGridView();
@@ -45,13 +46,31 @@ namespace ConcurrencyControl
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.RefreshButton = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.DR_TH2_GT2 = new System.Windows.Forms.DataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Update_DR_TH2_GT1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DR_TH2_GT1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tran2DataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tran1DataGridView)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DR_TH2_GT2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DR_TH2_GT1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -153,6 +172,16 @@ namespace ConcurrencyControl
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giao tác 1";
             // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Location = new System.Drawing.Point(646, 301);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(140, 52);
+            this.RefreshButton.TabIndex = 7;
+            this.RefreshButton.Text = "Làm mới";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -208,6 +237,8 @@ namespace ConcurrencyControl
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -216,15 +247,157 @@ namespace ConcurrencyControl
             this.tabPage2.Text = "Trường hợp 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // RefreshButton
+            // groupBox4
             // 
-            this.RefreshButton.Location = new System.Drawing.Point(646, 301);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(140, 52);
-            this.RefreshButton.TabIndex = 7;
-            this.RefreshButton.Text = "Làm mới";
-            this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.DR_TH2_GT2);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Location = new System.Drawing.Point(6, 332);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(937, 267);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Giao tác 2";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(605, 213);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(160, 50);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Xem (đã sửa lỗi)";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(771, 213);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(160, 50);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Xem";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // DR_TH2_GT2
+            // 
+            this.DR_TH2_GT2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DR_TH2_GT2.Location = new System.Drawing.Point(9, 56);
+            this.DR_TH2_GT2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DR_TH2_GT2.Name = "DR_TH2_GT2";
+            this.DR_TH2_GT2.RowHeadersWidth = 62;
+            this.DR_TH2_GT2.RowTemplate.Height = 28;
+            this.DR_TH2_GT2.Size = new System.Drawing.Size(922, 153);
+            this.DR_TH2_GT2.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(186, 28);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(230, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 17);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Chọn mã nhà muốn xem:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.Update_DR_TH2_GT1);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.DR_TH2_GT1);
+            this.groupBox3.Location = new System.Drawing.Point(6, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(937, 325);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Giao tác 1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(771, 260);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 50);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Xem danh sách nhà";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(186, 257);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(230, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Nhập ngày hết hạn mới:";
+            // 
+            // Update_DR_TH2_GT1
+            // 
+            this.Update_DR_TH2_GT1.Location = new System.Drawing.Point(605, 260);
+            this.Update_DR_TH2_GT1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Update_DR_TH2_GT1.Name = "Update_DR_TH2_GT1";
+            this.Update_DR_TH2_GT1.Size = new System.Drawing.Size(160, 50);
+            this.Update_DR_TH2_GT1.TabIndex = 2;
+            this.Update_DR_TH2_GT1.Text = "Thay đổi";
+            this.Update_DR_TH2_GT1.UseVisualStyleBackColor = true;
+            this.Update_DR_TH2_GT1.Click += new System.EventHandler(this.Update_DR_TH2_GT1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Chọn mã nhà cần gia hạn:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(186, 283);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(230, 22);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
+            // DR_TH2_GT1
+            // 
+            this.DR_TH2_GT1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DR_TH2_GT1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DR_TH2_GT1.Location = new System.Drawing.Point(9, 19);
+            this.DR_TH2_GT1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DR_TH2_GT1.Name = "DR_TH2_GT1";
+            this.DR_TH2_GT1.RowHeadersWidth = 62;
+            this.DR_TH2_GT1.RowTemplate.Height = 28;
+            this.DR_TH2_GT1.Size = new System.Drawing.Size(922, 230);
+            this.DR_TH2_GT1.TabIndex = 0;
             // 
             // DirtyRead
             // 
@@ -243,6 +416,13 @@ namespace ConcurrencyControl
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tran1DataGridView)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DR_TH2_GT2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DR_TH2_GT1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,5 +446,19 @@ namespace ConcurrencyControl
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ShowContract;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView DR_TH2_GT2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Update_DR_TH2_GT1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView DR_TH2_GT1;
     }
 }
