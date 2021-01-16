@@ -92,8 +92,15 @@ namespace ConcurrencyControl
         {
             Tuple<DataTable, int> data = LuotXemBUS.Instance.GetViewingOfHouseFixed(Tran1HouseIDTextBox.Text);
 
-            Tran1DataGridView.DataSource = data.Item1;
-            Tran1ViewingAmountLabel.Text = data.Item2.ToString();
+            if (data != null)
+            {
+                Tran1DataGridView.DataSource = data.Item1;
+                Tran1ViewingAmountLabel.Text = data.Item2.ToString();
+            }
+            else
+            {
+
+            }
         }
 
     }

@@ -104,7 +104,7 @@ namespace ConcurrencyControl
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(950, 600);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Cycle Deadlock";
+            this.tabPage1.Text = "Cycle Deadlock - Tân";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Cycle_groupBox2
@@ -381,7 +381,7 @@ namespace ConcurrencyControl
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(950, 600);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Conversion Deadlock";
+            this.tabPage2.Text = "Conversion Deadlock - Tân";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2

@@ -26,7 +26,14 @@ namespace ConcurrencyControl_BUS
 
         public void AddNewFixed(string name, string addr, string phone, string sex, DateTime dob, int nhucau, string maln, string tieuchi, string chinhanh)
         {
-            KhachHangDAO.Instance.AddNewFixed(name, addr, phone, sex, dob, nhucau, maln, tieuchi, chinhanh);
+            try
+            {
+                KhachHangDAO.Instance.AddNewFixed(name, addr, phone, sex, dob, nhucau, maln, tieuchi, chinhanh);
+            }
+            catch
+            {
+                return;
+            }
         }
 
         public DataTable GetAll()

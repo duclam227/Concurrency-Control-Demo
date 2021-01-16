@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConcurrencyControl_BUS;
+using ConcurrencyControl_DAO;
 
 namespace ConcurrencyControl
 {
@@ -94,7 +95,14 @@ namespace ConcurrencyControl
             string maln = cbb_loainha.SelectedItem.ToString();
             string chinhanh = cbb_chinhanh.SelectedItem.ToString();
 
-            KhachHangBUS.Instance.AddNewFixed(name, addr, phone, sex, dob, nhucau, maln, tieuchi, chinhanh);
+            try
+            {
+                KhachHangBUS.Instance.AddNewFixed(name, addr, phone, sex, dob, nhucau, maln, tieuchi, chinhanh);
+            }
+            catch
+            {
+                MessageBox.Show("Giao tác đã bị hủy do gặp deadlock");
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)

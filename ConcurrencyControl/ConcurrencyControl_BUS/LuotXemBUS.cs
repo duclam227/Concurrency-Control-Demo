@@ -67,7 +67,14 @@ namespace ConcurrencyControl_BUS
 
         public void AddViewingWithoutWait(string houseID, string cusID, string comment, DateTime date)
         {
-            LuotXemDAO.Instance.AddViewingWithoutWait(houseID, cusID, comment, date);
+            try
+            {
+                LuotXemDAO.Instance.AddViewingWithoutWait(houseID, cusID, comment, date);
+            }
+            catch
+            {
+
+            }
         }
 
         public Tuple<DataTable, int> GetViewingOfHouse(string houseID)
@@ -77,7 +84,14 @@ namespace ConcurrencyControl_BUS
 
         public Tuple<DataTable, int> GetViewingOfHouseFixed(string houseID)
         {
-            return LuotXemDAO.Instance.GetViewingOfHouseFixed(houseID);
+            try
+            {
+                return LuotXemDAO.Instance.GetViewingOfHouseFixed(houseID);
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

@@ -130,6 +130,10 @@
       <Project>{096e8473-de2e-47c3-941b-4d52fd1b6ffa}</Project>
       <Name>ConcurrencyControl_BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConcurrencyControl_DAO\ConcurrencyControl_DAO.csproj">
+      <Project>{80951e58-b422-425d-9a31-1c053f7f9ac2}</Project>
+      <Name>ConcurrencyControl_DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

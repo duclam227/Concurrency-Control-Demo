@@ -1,0 +1,11 @@
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\bin\Debug\ConcurrencyControl_BUS.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\bin\Debug\ConcurrencyControl_BUS.pdb
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\bin\Debug\ConcurrencyControl_DAO.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\bin\Debug\ConcurrencyControl_DAO.pdb
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.csprojAssemblyReference.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.Properties.Resources.resources
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.csproj.GenerateResource.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.csproj.CoreCompileInputs.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.csproj.CopyComplete
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.dll
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\HQT CSDL\Do an\Dot 4\Concurrency-Control-Demo\ConcurrencyControl\ConcurrencyControl_BUS\obj\Debug\ConcurrencyControl_BUS.pdb

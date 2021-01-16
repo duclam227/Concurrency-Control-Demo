@@ -92,7 +92,7 @@ namespace ConcurrencyControl
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(950, 600);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Trường hợp 1";
+            this.tabPage1.Text = "Trường hợp 1 - Đức";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -244,7 +244,7 @@ namespace ConcurrencyControl
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(950, 600);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Trường hợp 2";
+            this.tabPage2.Text = "Trường hợp 2 - Tân";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox4
